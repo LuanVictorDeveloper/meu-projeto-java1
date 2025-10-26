@@ -47,7 +47,7 @@ public class Interface {
          frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
          frame.setLayout(new BorderLayout());
 
-         tituloLabel.setBackground(customMusg);
+         tituloLabel.setBackground(Color.black);
          tituloLabel.setForeground(Color.white);
          tituloLabel.setFont(new Font("Arial", Font.PLAIN, 80));
          tituloLabel.setHorizontalAlignment(JLabel.RIGHT);
@@ -69,8 +69,26 @@ public class Interface {
              botoes.setFont(new Font("Arial", Font.PLAIN,30));
              botoes.setText(botoesValor);
              botoes.setFocusable(false);
-             tituloBotoesPanel.add(botoes);
 
+             if (Arrays.asList(operadoresBase).contains(botoesValor)) {
+
+                 botoes.setBackground(customWhiteParchment);
+                 botoes.setForeground(customMusg);
+
+             }
+             else if(Arrays.asList(operadoresExtra).contains(botoesValor)){
+                 botoes.setBackground(customVine);
+                 botoes.setForeground(Color.white);
+
+             }
+             else{
+
+                 botoes.setBackground(customPalidBlue);
+                 botoes.setForeground(Color.white);
+
+             }
+
+             tituloBotoesPanel.add(botoes);
          }
 
 
