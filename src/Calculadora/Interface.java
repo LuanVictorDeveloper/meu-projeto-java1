@@ -106,17 +106,26 @@ public class Interface {
 
                      }
                      else{
+
                          if(botoesValor == "."){
 
-                             if(!tituloLabel.getText().contains(botoesValor));
+                             if(!tituloLabel.getText().contains(botoesValor)) {
+
+                                 tituloLabel.setText(tituloLabel.getText() + botoesValor);
+
+                             }
 
                          }
                          else if("0123456789".contains(botoesValor)){
+
                              if(tituloLabel.getText() == "0"){
+
                                  tituloLabel.setText(botoesValor);
                              }
                              else{
+
                                  tituloLabel.setText(tituloLabel.getText() + botoesValor);
+
                              }
                          }
                      }
