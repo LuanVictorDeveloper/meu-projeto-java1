@@ -23,9 +23,9 @@ public class Interface {
      JPanel tituloPainel = new JPanel();
      JPanel tituloBotoesPanel = new JPanel();
 
-     String[] BotoesValores = {
+     String[] botoesValores = {
              "AC","+/-","%","÷",
-             "7","8","9", "X",
+             "7","8","9", "×",
              "4","5","6", "+",
              "3","2","1", "-",
              "0",".","√", "="
@@ -57,6 +57,19 @@ public class Interface {
          tituloPainel.setLayout(new BorderLayout());
          tituloPainel.add(tituloLabel);
          frame.add(tituloPainel, BorderLayout.NORTH);
+
+         tituloBotoesPanel.setLayout(new GridLayout(5,4));
+         tituloBotoesPanel.setBackground(customVine);
+         frame.add(tituloBotoesPanel);
+
+         for (int i = 0 ; i < botoesValores.length ; i++ ) {
+
+             JButton botoes = new JButton(botoesValores[i]);
+             String botoesValor = botoesValores[i];
+             botoes.setFont(new Font("Arial", Font.PLAIN,30));
+             botoes.setText(botoesValor);
+             tituloBotoesPanel.add(botoes);
+         }
 
 
      }
