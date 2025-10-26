@@ -108,6 +108,8 @@ public class Interface {
                      else{
                          if(botoesValor == "."){
 
+                             if(!tituloLabel.getText().contains(botoesValor));
+
                          }
                          else if("0123456789".contains(botoesValor)){
                              if(tituloLabel.getText() == "0"){
