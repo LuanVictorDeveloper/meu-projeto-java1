@@ -17,12 +17,21 @@ public class Interface {
 
      int janelaLA = 360;
 
-     JButton botao1 = null;
-
      JFrame frame = new JFrame("Calculadora");
 
      JLabel tituloLabel = new JLabel();
      JPanel tituloPainel = new JPanel();
+     JPanel tituloBotoesPanel = new JPanel();
+
+     String[] BotoesValores = {
+             "AC","+/-","%","÷",
+             "7","8","9", "X",
+             "4","5","6", "+",
+             "3","2","1", "-",
+             "0",".","√", "="
+     };
+    String[] operadoresBase = {"÷", "×", "-", "+", "="};
+    String[] operadoresExtra = {"AC", "+/-", "%"};
 
 
      Color customMusg = new Color(9, 23, 8);
@@ -47,7 +56,8 @@ public class Interface {
 
          tituloPainel.setLayout(new BorderLayout());
          tituloPainel.add(tituloLabel);
-         frame.add(tituloPainel);
+         frame.add(tituloPainel, BorderLayout.NORTH);
+
 
      }
 
