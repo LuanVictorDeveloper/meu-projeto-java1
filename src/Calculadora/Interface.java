@@ -68,7 +68,9 @@ public class Interface {
              String botoesValor = botoesValores[i];
              botoes.setFont(new Font("Arial", Font.PLAIN,30));
              botoes.setText(botoesValor);
+             botoes.setFocusable(false);
              tituloBotoesPanel.add(botoes);
+
          }
 
 
