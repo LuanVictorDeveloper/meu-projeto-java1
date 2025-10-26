@@ -69,6 +69,7 @@ public class Interface {
              botoes.setFont(new Font("Arial", Font.PLAIN,30));
              botoes.setText(botoesValor);
              botoes.setFocusable(false);
+             botoes.setBorder(new LineBorder(customVine));
 
              if (Arrays.asList(operadoresBase).contains(botoesValor)) {
 
@@ -89,6 +90,38 @@ public class Interface {
              }
 
              tituloBotoesPanel.add(botoes);
+
+             botoes.addActionListener(new ActionListener() {
+
+                 public void actionPerformed(ActionEvent e) {
+
+                     JButton botoes = (JButton) e.getSource();
+
+                     String botoesValor = botoes.getText();
+
+                     if(Arrays.asList(operadoresBase).contains(botoesValor)){
+
+                     }
+                     else if(Arrays.asList(operadoresExtra).contains(botoesValor)){
+
+                     }
+                     else{
+                         if(botoesValor == "."){
+
+                         }
+                         else if("0123456789".contains(botoesValor)){
+                             if(tituloLabel.getText() == "0"){
+                                 tituloLabel.setText(botoesValor);
+                             }
+                             else{
+                                 tituloLabel.setText(tituloLabel.getText() + botoesValor);
+                             }
+                         }
+                     }
+
+                 }
+
+             });
          }
 
 
